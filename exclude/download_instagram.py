@@ -21,7 +21,7 @@ for post in posts:
 
     insta_post["image_url"] = p["display_url"]
     insta_post["url"] = f"https://instagram.com/p/{p['shortcode']}"
-    insta_post["description"] = p["edge_media_to_caption"]["edges"][0]["node"]["text"]
+    # insta_post["description"] = p["edge_media_to_caption"]["edges"][0]["node"]["text"]
     insta_post["timestamp"] = p["taken_at_timestamp"]
 
     insta_posts.append(insta_post)
