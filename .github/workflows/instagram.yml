@@ -3,7 +3,7 @@ name: Download Instagram Files
 on: 
   schedule:
     # - cron: '0 0 * * *'
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   download:
@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r exclude/requirements.txt
       - name: Run code
         run: |
           python exclude/download_instagram.py
