@@ -9,25 +9,16 @@ jobs:
     name: Download
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v1
+      - name: Checkout repo
+        uses: actions/checkout@v2
         with:
-          python-version: 3.7
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r exclude/requirements.txt
-      - name: Run code
-        run: |
-          python exclude/download_instagram.py
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git commit -m "Added Instagram Posts"
+          ref: master
+      - name: Download Instagram
+        uses: konstantinkobs/jekyll-instagram-github-action@master
+        with:
+          account-name: konstantinkobs
+          output-path: _data/instagram.yml
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: Update Instagram Photos
