@@ -5,8 +5,8 @@ layout: default
 <h1>Wohnzimmerlicht</h1>
 
 <div class="button_wrapper">
-    <a data-id="switch1" class="button button_on" href="#">AN</a>
-    <a data-id="switch1" class="button button_off" href="#">AUS</a>
+    <span data-id="switch1" class="button button_on">AN</span>
+    <span data-id="switch1" class="button button_off" href="#">AUS</span>
 </div>
 
 
@@ -25,11 +25,12 @@ layout: default
 
     buttons.forEach(function(button) {
         button.addEventListener("click", function(e) {
-            e.preventDefault();
-
             const button_id = this.getAttribute("data-id");
             const state = this.classList.contains("button_on");
             iframe.src = getUrl(button_id, state);
+            
+            e.preventDefault();
+            e.stopPropagation();
         })
     });
 
@@ -57,6 +58,7 @@ layout: default
         text-align: center;
         padding: 30px;
         text-decoration: none;
+        cursor: pointer;
     }
 
     .button_on {
