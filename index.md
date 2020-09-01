@@ -24,16 +24,3 @@ layout: default
         </div>
     {% endfor %}
 </div>
-
-<!-- <div class="instaposts">
-    {% for p in site.data.instagram %}
-        <a href="{{ p.url }}" class="instapost">
-
-            <img class="cover" src="{{ p.image_url }}">
-
-            {% p.timestamp | date: "%d.%m.%Y" %}
-            {{ p.description }}
-
-        </div>
-    {% endfor %}
-</div> -->
