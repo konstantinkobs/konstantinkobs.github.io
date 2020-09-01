@@ -20,7 +20,7 @@ layout: default
     const iframe = document.querySelector("#iframe");
 
     function getUrl(button_id, state) {
-        return "http://kobsnas.local:51828/?accessoryId=" + button_id + "&state=" + state;
+        return "https://kobsnas.local:51828/?accessoryId=" + button_id + "&state=" + state;
     }
 
     buttons.forEach(function(button) {
