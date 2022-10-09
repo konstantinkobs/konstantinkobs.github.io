@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="fonts/poppins/poppins.css">
+    <link rel="stylesheet" href="fonts/computer-modern/fonts.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Konstantin Kobs</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Hi, I am Konstantin!</h1>
+        <p>
+            I am a PhD student at the University of Würzburg, Germany.
+        </p>
+    </header>
+    <section class="container">
+        <h2>Scientific Papers</h2>
+        <p>
+            Here are my most recent publications according to <a href="https://www.semanticscholar.org/author/Konstantin-Kobs/1493276636">Semantic Scholar</a>.
+            Their free API is used to retrieve this information and display it here.
+            Another list of publications can also be found on <a href="https://scholar.google.de/citations?user=fHCbRAIAAAAJ">Google Scholar</a>.
+        </p>
+    </section>
+    <section class="paper-container">
+        {% for paper in papers %}
+            <div class="paper">
+                <h3 class="paper-title">{{ paper.title }}</h3>
+                <span class="paper-authors">{{ paper.authors | join(', ') }}</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">{{ paper.venue }}</span>
+                    <span class="paper-year">{{ paper.year }}</span>
+                </div>
+                <p class="paper-abstract">
+                    {% if paper.abstract %}
+                        {{ paper.abstract }}
+                    {% else %}
+                        No abstract available.
+                    {% endif %}
+                </p>
+                <a href="{{ paper.url }}" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section class="container">
+        <h2>Music</h2>
+        <p>
+            Here are my most recent music releases.
+            You can find them on all major streaming and music purchasing platforms such as <a href="https://open.spotify.com/artist/5HmLGMva9N2aBEhKwe1yVb">Spotify</a>, <a href="https://music.apple.com/artist/konstantin-kobs/1431470000">Apple Music</a>, <a href="https://music.amazon.com/artists/B0871M5347/konstantin-kobs">Amazon Music</a>, etc. 
+        </p>
+    </section>
+    <section class="music-container">
+        {% for album in albums | sort(attribute="release_date") | reverse %}
+            <div class="music">
+                <img src="{{ album.cover_path }}" alt="{{ album.title }}" class="music-cover">
+                <div class="music-info">
+                    <h3 class="music-title">{{ album.title }}</h3>
+                    <div class="music-artist">{{ album.artist }}</div>
+                    <div class="music-year">{{ album.release_date[:4] }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <section class="container">
+        <h2>Other Links</h2>
+        <p>You can find me on multiple platforms. Here are the links to them:</p>
+
+        <div class="logo-container">
+            <div class="logo instagram">
+                <a href="https://www.instagram.com/konstantinkobs/" target="_blank">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+            <div class="logo twitter">
+                <a href="https://twitter.com/konstantinkobs" target="_blank">
+                    <img src="images/twitter.svg" alt="Twitter">
+                </a>
+            </div>
+            <div class="logo linkedin">
+                <a href="https://www.linkedin.com/in/konstantin-kobs-613872149/" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; Konstantin Kobs | <span class="impressum-link">Impressum/Legal</span>
+        <dialog class="impressum">
+            <h1>Impressum</h1>
+
+            <p>
+                Konstantin Kobs <br>
+                Spessartstraße 10A <br>
+                97082 Würzburg <br>
+                mail[at]konstantinkobs.de
+            </p>
+            <br>
+            <p>
+                Despite careful control of the content we do not assume any liability for the content of external links.
+                The operators of the linked pages are solely responsible for their content.
+            </p>
+            <br>
+            <p>
+                Information about papers written by Konstantin Kobs displayed on this website come from the semanticscholar.org API.
+                We cannot guarantee the correctness of the papers in this list, since semanticscholar does not allow for easy editing of e.g. paper titles.
+                We thus do not assume any liability for the paper list.
+            </p>
+            <br>
+            <p>
+                Information about music releases by Konstantin Kobs displayed on this website come from the iTunes API.
+                We cannot guarantee the correctness of the music titles in this list, since iTunes could potentially link wrong music to the artist page of Konstantin Kobs.
+                We thus do not assume any liability for the music list.
+            </p>
+
+            <button class="impressum-close">CLOSE</button>
+        </dialog>
+    </footer>
+
+
+    <script>
+        const impressumLink = document.querySelector(".impressum-link");
+        const impressum = document.querySelector(".impressum");
+        const impressumClose = document.querySelector(".impressum-close");
+
+        impressumLink.onclick = function(){
+            impressum.showModal();
+        }
+
+        impressumClose.onclick = function(){
+            impressum.close();
+        }
+    </script>
+</body>
+</html>

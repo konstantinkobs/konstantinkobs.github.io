@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="fonts/poppins/poppins.css">
+    <link rel="stylesheet" href="fonts/computer-modern/fonts.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Konstantin Kobs</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Hi, I am Konstantin!</h1>
+        <p>
+            I am a PhD student at the University of Würzburg, Germany.
+        </p>
+    </header>
+    <section class="container">
+        <h2>Scientific Papers</h2>
+        <p>
+            Here are my most recent publications according to <a href="https://www.semanticscholar.org/author/Konstantin-Kobs/1493276636">Semantic Scholar</a>.
+            Their free API is used to retrieve this information and display it here.
+            Another list of publications can also be found on <a href="https://scholar.google.de/citations?user=fHCbRAIAAAAJ">Google Scholar</a>.
+        </p>
+    </section>
+    <section class="paper-container">
+        
+            <div class="paper">
+                <h3 class="paper-title">On Background Bias in Deep Metric Learning</h3>
+                <span class="paper-authors">Konstantin Kobs, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference"></span>
+                    <span class="paper-year">2022</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Deep Metric Learning trains a neural network to map input images to a lower-dimensional embedding space such that similar images are closer together than dissimilar images. When used for item retrieval, a query image is embedded using the trained model and the closest items from a database storing their respective embeddings are returned as the most similar items for the query. Especially in product retrieval, where a user searches for a certain product by taking a photo of it, the image background is usually not important and thus should not inﬂuence the embedding process. Ideally, the retrieval process always returns ﬁtting items for the photographed object, regardless of the environment the photo was taken in. In this paper, we analyze the inﬂuence of the image background on Deep Metric Learning models by utilizing ﬁve common loss functions and three common datasets. We ﬁnd that Deep Metric Learning networks are prone to so-called background bias, which can lead to a severe decrease in retrieval performance when changing the image background during inference. We also show that replacing the background of images during training with random background images alleviates this issue. Since we use an automatic background removal method to do this background replacement, no additional manual labeling work and model changes are required while inference time stays the same. Qualitative and quantitative analyses, for which we introduce a new evaluation metric, conﬁrm that models trained with replaced backgrounds attend more to the main object in the image, beneﬁtting item retrieval systems.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/dda1062bc212583ad6a5e9e09de109fd0c86d0ea" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">WueDevils at SemEval-2022 Task 8: Multilingual News Article Similarity via Pair-Wise Sentence Similarity Matrices</h3>
+                <span class="paper-authors">Dirk Wangsadirdja, Felix Heinickel, Simon Trapp, Albin Zehe, Konstantin Kobs, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">SEMEVAL</span>
+                    <span class="paper-year">2022</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        We present a system that creates pair-wise cosine and arccosine sentence similarity matrices using multilingual sentence embeddings obtained from pre-trained SBERT and Universal Sentence Encoder (USE) models respectively. For each news article sentence, it searches the most similar sentence from the other article and computes an average score. Further, a convolutional neural network calculates a total similarity score for the article pairs on these matrices. Finally, a random forest regressor merges the previous results to a final score that can optionally be extended with a publishing date score.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/eb5e149afc25f1b1464090587ab62b49a98b7ff8" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">LSX_team5 at SemEval-2022 Task 8: Multilingual News Article Similarity Assessment based on Word- and Sentence Mover’s Distance</h3>
+                <span class="paper-authors">Stefan Heil, Karina Kopp, Albin Zehe, Konstantin Kobs, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">SEMEVAL</span>
+                    <span class="paper-year">2022</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        This paper introduces our submission for the SemEval 2022 Task 8: Multilingual News Article Similarity. The task of the competition consisted of the development of a model, capable of determining the similarity between pairs of multilingual news articles. To address this challenge, we evaluated the Word Mover’s Distance in conjunction with word embeddings from ConceptNet Numberbatch and term frequencies of WorldLex, as well the Sentence Mover’s Distance based on sentence embeddings generated by pretrained transformer models of Sentence-BERT. To facilitate the comparison of multilingual articles with Sentence-BERT models, we deployed a Neural Machine Translation system. All our models achieve stable results in multilingual similarity estimation without learning parameters.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/edf0951a9148fe9b621473a68f0b44b3d3430b31" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">CoBERT: Scientific Collaboration Prediction via Sequential Recommendation</h3>
+                <span class="paper-authors">Tobias Koopmann, Konstantin Kobs, Konstantin Herud, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">2021 International Conference on Data Mining Workshops (ICDMW)</span>
+                    <span class="paper-year">2021</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Collaborations are an Important factor for scientific success, as the joint work leads to results individual scientists cannot easily reach. Recommending collaborations automatically can alleviate the time consuming and tedious search for potential collaborators. Usually, such recommendation systems rely on graph structures modeling co-authorship of papers and content-based relations such as similar paper keywords. Models are then trained to estimate the probability of links between certain authors in these graphs.In this paper, we argue that the order of papers is crucial for reliably predicting future collaborations, which is not considered by graph-based recommendation systems. We thus propose to reformulate the task of collaboration recommendation as a sequential recommendation task. Here, we aim to predict the next co-author in a chronologically sorted sequence of an author’s collaborators. We introduce CoBERT, a BERT4Rec inspired model, that predicts the sequence’s next co-author and thus a potential collaborator. Since the order of co-authors of a single paper is not that important compared to the overall paper order, we leverage positional embeddings encoding paper positions instead of co-author positions in the sequence. Additionally, we inject content features about every paper and their co-authors. We evaluate CoBERT on two datasets consisting of papers from the field of Artificial Intelligence and the journal PlosOne. We show that CoBERT can outperform graph-based methods and BERT4Rec when predicting the co-authors of the next paper. We make our code and data available.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/1980f7230a4c1871cedc856ce836b8d1f62d10e8" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Density-based weighting for imbalanced regression</h3>
+                <span class="paper-authors">M. Steininger, Konstantin Kobs, Padraig Davidson, Anna Krause, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">Mach. Learn.</span>
+                    <span class="paper-year">2021</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        No abstract available.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/5e35f17cc6e37ab83f3019d7e86b7dd13a892c55" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Do Different Deep Metric Learning Losses Lead to Similar Learned Features?</h3>
+                <span class="paper-authors">Konstantin Kobs, M. Steininger, Andrzej Dulny, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">2021 IEEE/CVF International Conference on Computer Vision (ICCV)</span>
+                    <span class="paper-year">2021</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Recent studies have shown that many deep metric learning loss functions perform very similarly under the same experimental conditions. One potential reason for this unexpected result is that all losses let the network focus on similar image regions or properties. In this paper, we investigate this by conducting a two-step analysis to extract and compare the learned visual features of the same model architecture trained with different loss functions: First, we compare the learned features on the pixel level by correlating saliency maps of the same input images. Second, we compare the clustering of embeddings for several image properties, e.g. object color or illumination. To provide independent control over these properties, photo-realistic 3D car renders similar to images in the Cars196 dataset are generated. In our analysis, we compare 14 pretrained models from a recent study and find that, even though all models perform similarly, different loss functions can guide the model to learn different features. We especially find differences between classification and ranking based losses. Our analysis also shows that some seemingly irrelevant properties can have significant influence on the resulting embedding. We encourage researchers from the deep metric learning community to use our methods to get insights into the features learned by their proposed methods.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/9d477fd3e43d29e54517e0b4e13cb1ccd20be469" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Self-Supervised Multi-Task Pretraining Improves Image Aesthetic Assessment</h3>
+                <span class="paper-authors">Jan Pfister, Konstantin Kobs, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</span>
+                    <span class="paper-year">2021</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Neural networks for Image Aesthetic Assessment are usually initialized with weights of pretrained ImageNet models and then trained using a labeled image aesthetics dataset. We argue that the ImageNet classification task is not well-suited for pretraining, since content based classification is designed to make the model invariant to features that strongly influence the image’s aesthetics, e.g. stylebased features such as brightness or contrast.We propose to use self-supervised aesthetic-aware pretext tasks that let the network learn aesthetically relevant features, based on the observation that distorting aesthetic images with image filters usually reduces their appeal. To ensure that images are not accidentally improved when filters are applied, we introduce a large dataset comprised of highly aesthetic images as the starting point for the distortions. The network is then trained to rank less distorted images higher than their more distorted counterparts. To exploit effects of multiple different objectives, we also embed this task into a multi-task setting by adding either a self-supervised classification or regression task. In our experiments, we show that our pretraining improves performance over the ImageNet initialization and reduces the number of epochs until convergence by up to 47%. Additionally, we can match the performance of an ImageNet-initialized model while reducing the labeled training data by 20%. We make our code, data, and pretrained models available.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/e9f52050e8420cb3e1d215dcdf64d165c7508c12" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">MapLUR: Exploring a new Paradigm for Estimating Air Pollution using Deep Learning on Map Images</h3>
+                <span class="paper-authors">M. Steininger, Konstantin Kobs, Albin Zehe, Florian Lautenschlager, Martin Becker, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">ACM Trans. Spatial Algorithms Syst.</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Land-use regression (LUR) models are important for the assessment of air pollution concentrations in areas without measurement stations. While many such models exist, they often use manually constructed features based on restricted, locally available data. Thus, they are typically hard to reproduce and challenging to adapt to areas beyond those they have been developed for. In this paper, we advocate a paradigm shift for LUR models: We propose the Data-driven, Open, Global (DOG) paradigm that entails models based on purely data-driven approaches using only openly and globally available data. Progress within this paradigm will alleviate the need for experts to adapt models to the local characteristics of the available data sources and thus facilitate the generalizability of air pollution models to new areas on a global scale. In order to illustrate the feasibility of the DOG paradigm for LUR, we introduce a deep learning model called MapLUR. It is based on a convolutional neural network architecture and is trained exclusively on globally and openly available map data without requiring manual feature engineering. We compare our model to state-of-the-art baselines like linear regression, random forests and multi-layer perceptrons using a large data set of modeled $\text{NO}_2$ concentrations in Central London. Our results show that MapLUR significantly outperforms these approaches even though they are provided with manually tailored features. Furthermore, we illustrate that the automatic feature extraction inherent to models based on the DOG paradigm can learn features that are readily interpretable and closely resemble those commonly used in traditional LUR approaches.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/04b4ab09cfed4ce8e534685bc49dedbf8fe81b18" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Emote-Controlled</h3>
+                <span class="paper-authors">Konstantin Kobs, Albin Zehe, Armin Bernstetter, Julian Chibane, J. Pfister, Julian Tritscher, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">ACM Trans. Soc. Comput.</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        In recent years, streaming platforms for video games have seen increasingly large interest, as so-called esports have developed into a lucrative branch of business. Like for other sports, watching esports has become a new kind of entertainment medium, which is possible due to platforms that allow gamers to live stream their gameplay, the most popular platform being Twitch.tv. On these platforms, users can comment on streams in real time and thereby express their opinion about the events in the stream. Due to the popularity of Twitch.tv, this can be a valuable source of feedback for streamers aiming to improve their reception in a gaming-oriented audience. In this work, we explore the possibility of deriving feedback for video streams on Twitch.tv by analyzing the sentiment of live text comments made by stream viewers in highly active channels. Automatic sentiment analysis on these comments is a challenging task, as one can compare the language used in Twitch.tv with that used by an audience in a stadium, shouting as loud as possible in sometimes nonorganized ways. This language is very different from common English, mixing Internet slang and gaming-related language with abbreviations, intentional and unintentional grammatical and orthographic mistakes, and emoji-like images called emotes. Classic lexicon-based sentiment analysis techniques therefore fail when applied to Twitch comments. To overcome the challenge posed by the nonstandard language, we propose two unsupervised lexicon-based approaches that make heavy use of the information encoded in emotes, as well as a weakly supervised neural network–based classifier trained on the lexicon-based outputs, which is supposed to help generalization to unknown words by use of domain-specific word embeddings. To enable better understanding of Twitch.tv comments, we analyze a large dataset of comments, uncovering specific properties of their language, and provide a smaller set of comments labeled with sentiment information by crowdsourcing. We present two case studies showing the effectiveness of our methods in generating sentiment trajectories for events live streamed on Twitch.tv that correlate well with specific topics in the given stream. This allows for a new kind of implicit real-time feedback gathering for Twitch streamers and companies producing games or streaming content on Twitch. We make our datasets and code publicly available for further research.1
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/3c9a6db8d70d712493196c5718cc1e8a116332d2" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">OpenLUR: Off-the-shelf air pollution modeling with open features and machine learning</h3>
+                <span class="paper-authors">Florian Lautenschlager, Martin Becker, Konstantin Kobs, M. Steininger, Padraig Davidson, Anna Krause, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">Atmospheric Environment</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        No abstract available.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/6eee4f33a3ef6dcdafead44f011e8a0e7c554b18" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">MapLUR</h3>
+                <span class="paper-authors">M. Steininger, Konstantin Kobs, Albin Zehe, Florian Lautenschlager, Martin Becker, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference"></span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Land-use regression (LUR) models are important for the assessment of air pollution concentrations in areas without measurement stations. While many such models exist, they often use manually constructed features based on restricted, locally available data. Thus, they are typically hard to reproduce and challenging to adapt to areas beyond those they have been developed for. In this article, we advocate a paradigm shift for LUR models: We propose the Data-driven, Open, Global (DOG) paradigm that entails models based on purely data-driven approaches using only openly and globally available data. Progress within this paradigm will alleviate the need for experts to adapt models to the local characteristics of the available data sources and thus facilitate the generalizability of air pollution models to new areas on a global scale. To illustrate the feasibility of the DOG paradigm for LUR, we introduce a deep-learning model called MapLUR. It is based on a convolutional neural network architecture and is trained exclusively on globally and openly available map data without requiring manual feature engineering. We compare our model to state-of-the-art baselines like linear regression, random forests and multi-layer perceptrons using a large data set of modeled NO2 concentrations in Central London. Our results show that MapLUR significantly outperforms these approaches even though they are provided with manually tailored features. Furthermore, we illustrate that the automatic feature extraction inherent to models based on the DOG paradigm can learn features that are readily interpretable and closely resemble those commonly used in traditional LUR approaches.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/6f36fdb9ac3367ca7e73d65274b3dee38c6181f7" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">NICER: Aesthetic Image Enhancement with Humans in the Loop</h3>
+                <span class="paper-authors">Michael Fischer, Konstantin Kobs, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">ArXiv</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Fully- or semi-automatic image enhancement software helps users to increase the visual appeal of photos and does not require in-depth knowledge of manual image editing. However, fully-automatic approaches usually enhance the image in a black-box manner that does not give the user any control over the optimization process, possibly leading to edited images that do not subjectively appeal to the user. Semi-automatic methods mostly allow for controlling which pre-defined editing step is taken, which restricts the users in their creativity and ability to make detailed adjustments, such as brightness or contrast. We argue that incorporating user preferences by guiding an automated enhancement method simplifies image editing and increases the enhancement's focus on the user. This work thus proposes the Neural Image Correction & Enhancement Routine (NICER), a neural network based approach to no-reference image enhancement in a fully-, semi-automatic or fully manual process that is interactive and user-centered. NICER iteratively adjusts image editing parameters in order to maximize an aesthetic score based on image style and content. Users can modify these parameters at any time and guide the optimization process towards a desired direction. This interactive workflow is a novelty in the field of human-computer interaction for image enhancement tasks. In a user study, we show that NICER can improve image aesthetics without user interaction and that allowing user interaction leads to diverse enhancement outcomes that are strongly preferred over the unedited image. We make our code publicly available to facilitate further research in this direction.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/7e3169f1306cbcc99195e203cfdf52e500841f73" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Where to Submit? Helping Researchers to Choose the Right Venue</h3>
+                <span class="paper-authors">Konstantin Kobs, Tobias Koopmann, Albin Zehe, David Fernes, Philipp Krop, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">FINDINGS</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Whenever researchers write a paper, the same question occurs: “Where to submit?” In this work, we introduce WTS, an open and interpretable NLP system that recommends conferences and journals to researchers based on the title, abstract, and/or keywords of a given paper. We adapt the TextCNN architecture and automatically analyze its predictions using the Integrated Gradients method to highlight words and phrases that led to the recommendation of a scientific venue. We train and test our method on publications from the fields of artificial intelligence (AI) and medicine, both derived from the Semantic Scholar dataset. WTS achieves an Accuracy@5 of approximately 83% for AI papers and 95% in the field of medicine. It is open source and available for testing on https://wheretosubmit.ml.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/823fe97a65f34abbc60f33179751b808ce60919f" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Improving Sentiment Analysis with Biofeedback Data</h3>
+                <span class="paper-authors">Daniel Schlör, Albin Zehe, Konstantin Kobs, Blerta Veseli, Franziska Westermeier, Larissa Brübach, D. Roth, M. Latoschik, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">ONION</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Humans frequently are able to read and interpret emotions of others by directly taking verbal and non-verbal signals in human-to-human communication into account or to infer or even experience emotions from mediated stories. For computers, however, emotion recognition is a complex problem: Thoughts and feelings are the roots of many behavioural responses and they are deeply entangled with neurophysiological changes within humans. As such, emotions are very subjective, often are expressed in a subtle manner, and are highly depending on context. For example, machine learning approaches for text-based sentiment analysis often rely on incorporating sentiment lexicons or language models to capture the contextual meaning. This paper explores if and how we further can enhance sentiment analysis using biofeedback of humans which are experiencing emotions while reading texts. Specifically, we record the heart rate and brain waves of readers that are presented with short texts which have been annotated with the emotions they induce. We use these physiological signals to improve the performance of a lexicon-based sentiment classifier. We find that the combination of several biosignals can improve the ability of a text-based classifier to detect the presence of a sentiment in a text on a per-sentence level.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/8a48b907c489bc78e4b67d56cdc11f3449d6aa4c" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Towards Predicting the Subscription Status of Twitch.tv Users - ECML-PKDD ChAT Discovery Challenge 2020</h3>
+                <span class="paper-authors">Konstantin Kobs, Martin Potthast, Matti Wiegmann, Albin Zehe, Benno Stein, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">ChAT@PKDD/ECML</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        We investigate whether the subscription status of active users of Twitch can be inferred from their activity patterns in the chats of streamers. To enable a diversity of solutions to this problem, this task was advertised as an ECML-PKDD discovery challenge 2020, called Chat Analytics for Twitch (ChAT). Four participants submitted their working prediction models, which were evaluated at our site. The winning approach achieved an F1 score of 0.343, outperforming the baseline by a significant margin. The most salient conclusion that can be drawn at this time is that interaction behavior plays a crucial role in solving this task, meriting further analysis into this direction.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/8bdaba2ce673c8fe167911de05345570508948f6" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Anomaly Detection in Beehives using Deep Recurrent Autoencoders</h3>
+                <span class="paper-authors">Padraig Davidson, M. Steininger, Florian Lautenschlager, Konstantin Kobs, Anna Krause, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">SENSORNETS</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        Precision beekeeping allows to monitor bees' living conditions by equipping beehives with sensors. The data recorded by these hives can be analyzed by machine learning models to learn behavioral patterns of or search for unusual events in bee colonies. One typical target is the early detection of bee swarming as apiarists want to avoid this due to economical reasons. Advanced methods should be able to detect any other unusual or abnormal behavior arising from illness of bees or from technical reasons, e.g. sensor failure. 
+In this position paper we present an autoencoder, a deep learning model, which detects any type of anomaly in data independent of its origin. Our model is able to reveal the same swarms as a simple rule-based swarm detection algorithm but is also triggered by any other anomaly. We evaluated our model on real world data sets that were collected on different hives and with different sensor setups.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/8ebb7016c8a6015133d7ae53a6724b861d11b19b" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">Semi-Supervised Learning for Grain Size Distribution Interpolation</h3>
+                <span class="paper-authors">Konstantin Kobs, Christian Schäfer, M. Steininger, Anna Krause, R. Baumhauer, H. Paeth, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">ICPR Workshops</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        No abstract available.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/91f878d40677036f5e0eb56d6fde2f8b934e981b" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">SimLoss: Class Similarities in Cross Entropy</h3>
+                <span class="paper-authors">Konstantin Kobs, M. Steininger, Albin Zehe, Florian Lautenschlager, A. Hotho</span>
+                <div class="paper-venue">
+                    <span class="paper-conference">ISMIS</span>
+                    <span class="paper-year">2020</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        No abstract available.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/ee762a21f3e593794a3615a8a9a9e30470d97643" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+            <div class="paper">
+                <h3 class="paper-title">1 Emote-Controlled Obtaining Implicit Viewer Feedback through Emote based Sentiment Analysis on Comments of Popular Twitch . tv Channels</h3>
+                <span class="paper-authors">Konstantin Kobs, Albin Zehe, Armin Bernstetter, Julian Chibane, Jan, Pfister</span>
+                <div class="paper-venue">
+                    <span class="paper-conference"></span>
+                    <span class="paper-year">None</span>
+                </div>
+                <p class="paper-abstract">
+                    
+                        No abstract available.
+                    
+                </p>
+                <a href="https://www.semanticscholar.org/paper/d3f8464fa468cc2693175b25af6ecde82c715c39" class="paper-url" target="_blank">
+                    read more
+                </a>
+            </div>
+        
+    </section>
+
+    <section class="container">
+        <h2>Music</h2>
+        <p>
+            Here are my most recent music releases.
+            You can find them on all major streaming and music purchasing platforms such as <a href="https://open.spotify.com/artist/5HmLGMva9N2aBEhKwe1yVb">Spotify</a>, <a href="https://music.apple.com/artist/konstantin-kobs/1431470000">Apple Music</a>, <a href="https://music.amazon.com/artists/B0871M5347/konstantin-kobs">Amazon Music</a>, etc. 
+        </p>
+    </section>
+    <section class="music-container">
+        
+            <div class="music">
+                <img src="covers/1619312697.jpg" alt="Bergab/Bergauf - Single" class="music-cover">
+                <div class="music-info">
+                    <h3 class="music-title">Bergab/Bergauf - Single</h3>
+                    <div class="music-artist">Konstantin Kobs & Schatzsucher</div>
+                    <div class="music-year">2022</div>
+                </div>
+            </div>
+        
+            <div class="music">
+                <img src="covers/1573923466.jpg" alt="Lockdown-Highlight (feat. Tho* & Becca) - Single" class="music-cover">
+                <div class="music-info">
+                    <h3 class="music-title">Lockdown-Highlight (feat. Tho* & Becca) - Single</h3>
+                    <div class="music-artist">Konstantin Kobs</div>
+                    <div class="music-year">2021</div>
+                </div>
+            </div>
+        
+            <div class="music">
+                <img src="covers/1576132382.jpg" alt="God Is What I See - Single" class="music-cover">
+                <div class="music-info">
+                    <h3 class="music-title">God Is What I See - Single</h3>
+                    <div class="music-artist">Konstantin Kobs</div>
+                    <div class="music-year">2020</div>
+                </div>
+            </div>
+        
+            <div class="music">
+                <img src="covers/1580091676.jpg" alt="In Stereo - EP" class="music-cover">
+                <div class="music-info">
+                    <h3 class="music-title">In Stereo - EP</h3>
+                    <div class="music-artist">BEA & Konstantin Kobs</div>
+                    <div class="music-year">2018</div>
+                </div>
+            </div>
+        
+    </section>
+    <section class="container">
+        <h2>Other Links</h2>
+        <p>You can find me on multiple platforms. Here are the links to them:</p>
+
+        <div class="logo-container">
+            <div class="logo instagram">
+                <a href="https://www.instagram.com/konstantinkobs/" target="_blank">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+            <div class="logo twitter">
+                <a href="https://twitter.com/konstantinkobs" target="_blank">
+                    <img src="images/twitter.svg" alt="Twitter">
+                </a>
+            </div>
+            <div class="logo linkedin">
+                <a href="https://www.linkedin.com/in/konstantin-kobs-613872149/" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; Konstantin Kobs | <span class="impressum-link">Impressum/Legal</span>
+        <dialog class="impressum">
+            <h1>Impressum</h1>
+
+            <p>
+                Konstantin Kobs <br>
+                Spessartstraße 10A <br>
+                97082 Würzburg <br>
+                mail[at]konstantinkobs.de
+            </p>
+            <br>
+            <p>
+                Despite careful control of the content we do not assume any liability for the content of external links.
+                The operators of the linked pages are solely responsible for their content.
+            </p>
+            <br>
+            <p>
+                Information about papers written by Konstantin Kobs displayed on this website come from the semanticscholar.org API.
+                We cannot guarantee the correctness of the papers in this list, since semanticscholar does not allow for easy editing of e.g. paper titles.
+                We thus do not assume any liability for the paper list.
+            </p>
+            <br>
+            <p>
+                Information about music releases by Konstantin Kobs displayed on this website come from the iTunes API.
+                We cannot guarantee the correctness of the music titles in this list, since iTunes could potentially link wrong music to the artist page of Konstantin Kobs.
+                We thus do not assume any liability for the music list.
+            </p>
+
+            <button class="impressum-close">CLOSE</button>
+        </dialog>
+    </footer>
+
+
+    <script>
+        const impressumLink = document.querySelector(".impressum-link");
+        const impressum = document.querySelector(".impressum");
+        const impressumClose = document.querySelector(".impressum-close");
+
+        impressumLink.onclick = function(){
+            impressum.showModal();
+        }
+
+        impressumClose.onclick = function(){
+            impressum.close();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+:root {
+    --color-primary: #355C7D;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: dotted;
+    transition: all .3s ease-in-out;
+}
+
+a:hover {
+    color: black;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2::before {
+    content: '» ';
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* PAPERS */
+.paper-container {
+    font-family: "Computer Modern Serif", serif;
+
+    width: 100%;
+    position: relative;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    background-color: var(--color-primary);
+
+    padding: 1rem 2rem;
+    padding-left: calc(max(50vw - 1000px / 2, 2rem));
+}
+
+.paper {
+    position: relative;
+    display: inline-block;
+    white-space: normal;
+
+    background-color: white;
+
+    aspect-ratio: 1.618 / 1;
+    width: min(500px, 100vw);
+    overflow: hidden;
+
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    
+    margin: 10px 10px 0px 10px;
+    padding: 25px 25px 0px 25px;
+}
+
+.paper-title {
+    text-align: center;
+}
+
+.paper-authors {
+    display: block;
+    text-align: center;
+}
+
+.paper-venue {
+    text-align: center;
+    color: #777;
+}
+
+.paper-conference {
+    font-style: italic;
+}
+
+.paper-abstract {
+    text-align: justify;
+}
+
+.paper-url {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-primary);
+    text-decoration: none;
+
+    position: absolute;
+    display: block;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 1rem;
+
+    background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 30%, #fff 90%);
+}
+
+
+
+/* MUSIC */
+.music-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+
+    background-color: var(--color-primary);
+
+    padding: 1rem 2rem;
+    padding-left: calc(max(50vw - 1000px / 2, 2rem));
+}
+
+.music {
+    color: rgba(255, 255, 255, 0.8);
+
+    white-space: normal;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 10px;
+    max-width: 300px;
+}
+
+.music-cover {
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.music-info {
+    padding: 1rem 0;
+}
+
+
+/* Logos */
+.logo-container {
+    display: flex;
+}
+
+.logo {
+    width: 33.3%;
+    padding: 2rem;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo {
+    transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+
+/* Footer */
+footer {
+    color: #bbb;
+    text-align: center;
+
+    padding: 2rem;
+    display:block;
+}
+
+.impressum-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.impressum {
+    width: 100%;
+    max-width: 700px;
+
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+    padding: 1rem 2rem;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.impressum::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.impressum-close {
+    border: none;
+    outline: none;
+
+    margin-top: 1rem;
+
+    display: block;
+    padding: 1rem 2rem;
+    background: #eee;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+        padding: 0.5rem 1rem;
+    }
+
+    .paper {
+        aspect-ratio: 1 / 1;
+    }
+}
