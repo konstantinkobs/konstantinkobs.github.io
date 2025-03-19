@@ -24,6 +24,7 @@ body {
 
 header {
     margin: 0 auto;
+    padding: 0;
     width: 100%;
     max-width: 1500px;
 
@@ -38,11 +39,15 @@ header {
 
 main {
     max-width: 82ch;
-    min-width: 32ch;
+    min-width: 31ch;
     margin: 0 auto;
     padding: 1ch;
 
     container-type: inline-size;
+}
+
+b {
+    font-weight: 700;
 }
 
 a {
